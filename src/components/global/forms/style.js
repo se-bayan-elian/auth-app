@@ -13,7 +13,7 @@ export const Validation = styled.div`
 `
 export const Control = styled.input`
   border-radius: 0.375rem;
-  border: 1px solid ${props => props.variant == 'error' ? red : '#8692A6'};
+  border: 1px solid ${props => props.variant == 'error' ? 'red' : '#8692A6'};
   height: 4rem;
   width : 100%;
   padding : 1.44rem 1.88rem;
