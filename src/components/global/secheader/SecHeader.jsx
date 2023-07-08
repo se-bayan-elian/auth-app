@@ -1,5 +1,5 @@
 import React from 'react'
-import Typography from '../global/typography/Typography'
+import Typography from '../typography/Typography'
 import { StyledSecHeader } from './style'
 const SecHeader = ({variant,size,heading1,heading2}) => {
   // variant center , left 
