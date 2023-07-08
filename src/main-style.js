@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   button{
-    background-color : transparent
+    background-color : transparent;
+    cursor: pointer;
   }
   ul{
     list-style-type : none;
