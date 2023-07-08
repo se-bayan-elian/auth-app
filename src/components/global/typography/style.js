@@ -7,10 +7,10 @@ const commonStyles = css`
 `;
 export const StyledH1 = styled.h1`
   color: #000;
-  font-size: ${props => props.variant == 'lg' ? '2.625rem' : '1.875rem'};
   font-weight: 700;
   line-height: normal;
   margin-bottom: 10px;
+  text-align: ${props=>  props.variant};
   ${commonStyles}
 
 `
