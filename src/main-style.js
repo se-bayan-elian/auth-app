@@ -23,7 +23,6 @@ const GlobalStyle = createGlobalStyle`
     list-style-type : none;
   }
   body{
-    overflow: hidden;
     font-family : 'Inter','Times New Roman';
   }
 `
