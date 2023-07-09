@@ -11,7 +11,7 @@ import {
 import Typography from "../typography/Typography.jsx";
 import Button from "../Button/Button.jsx";
 const Form = ({ children }) => {
-  return <StyledForm novalidate>{children}</StyledForm>;
+  return <StyledForm noValidate>{children}</StyledForm>;
 };
 Form.Validation = ({ msg, children, textColor }) => {
   return (
@@ -65,7 +65,7 @@ Form.Checkbox = ({ children, handleChange, value, variant }) => {
         onChange={handleChange}
         id="conditions"
       />
-      <span class="mark"></span>
+      <span className="mark"></span>
       <label htmlFor="conditions">{children}</label>
     </StyledCheckbox>
   );
