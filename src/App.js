@@ -1,12 +1,11 @@
 import { useState } from "react";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
-
+import Login from './components/pages/login/Login'
+import Register from './components/pages/register/Register'
 function App() {
-  const [page ,setPage] = useState('login')
+  const [page, setPage] = useState('register')
   return (
     <div className="App">
-      {page == 'login' ? <Login setPage={setPage}/>: <Register setPage={setPage}/>}
+      {page == 'login' ? <Login setPage={setPage} /> : <Register setPage={setPage} />}
     </div>
   )
 }

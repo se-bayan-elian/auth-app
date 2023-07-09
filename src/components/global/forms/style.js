@@ -41,17 +41,72 @@ export const StyledForm = styled.form`
   display : flex ;
   width: 26.625rem;
   flex-direction : column;
-  gap : 0.87rem;
+  gap : 1.5rem;
 
 `
-export const ControlIcon = styled.div`
+export const StyledControlIcon = styled.div`
   position : absolute;
-  top : 14rem ;
-  right : 1.38rem;
+  top : 3.3rem ;
+  right : 1.03rem;
   width: 1.875rem;
   height: 1.5rem; 
+  cursor : pointer;
   svg{
     width : 100%;
     height : 100%
   }
+`
+
+export const StyledCheckbox = styled.div`
+  display: flex;
+  gap : 0.69rem;
+  align-items: center;
+  position: relative;
+  label{
+    color: var(--gray-color);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  input {
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+ /* Hide the default checkbox */
+ & {
+            opacity: 0;
+        }
+  }    
+        /* creating a custom checkbox based
+            on demand */
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border : 4px solid ${props => props.variant == 'error' ? '#d06868' : '#C4C4C4'};
+    }
+          
+        span:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+          
+        input:checked ~ span:after {
+            display: block;
+        }
+         span:after {
+            left: -1.5px;
+            bottom: -1.5px;
+            width: 120%;
+            height: 120%;
+            border-radius: 0.25rem;
+            background-color :#1565D8; 
+        }
+  
 `

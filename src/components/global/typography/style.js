@@ -12,6 +12,7 @@ export const StyledH1 = styled.h1`
   margin-bottom: 10px;
   text-align: ${props=>  props.variant};
   ${commonStyles}
+  
 
 `
 export const StyledH2 = styled.h2`

@@ -1,12 +1,12 @@
 import React from 'react'
-import SocialMedia from './socialmedia/SocialMedia'
-import SecHeader from '../../global/secheader/SecHeader'
+import Left from './left/Left'
+import Right from './right/Right'
 
-const Login = () => {
+const Login = ({setPage}) => {
   return (
-    <div>
-      <SocialMedia></SocialMedia>
-      <SecHeader heading1='Join the game!' heading2='For the purpose of gamers regulation, your details are required.' variant='center' size='md'></SecHeader>
+    <div className='login-page' style={{display : 'flex', height : '100vh'}}>
+      <Left ></Left>
+      <Right setPage={setPage}></Right>
     </div>
   )
 }

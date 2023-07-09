@@ -23,7 +23,8 @@ export const StyledSocialMedia = styled.div`
   display: flex;
   justify-content :center;
   gap : 1rem;
-  margin-bottom: 3rem;
   width: 19.25rem;
   height: 4.0625rem;
+  margin:0 auto 3rem;
+
 `

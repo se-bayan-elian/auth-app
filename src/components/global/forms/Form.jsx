@@ -3,42 +3,50 @@ import {
   Control,
   ControlIcon,
   Group,
+  StyledCheckbox,
+  StyledControlIcon,
   StyledForm,
   Validation,
 } from "./style.js";
 import Typography from "../typography/Typography.jsx";
 import Button from "../Button/Button.jsx";
 const Form = ({ children }) => {
-  return <StyledForm>{children}</StyledForm>;
+  return <StyledForm novalidate>{children}</StyledForm>;
 };
-Form.Validation = ({ msg, children }) => {
+Form.Validation = ({ msg, children, textColor }) => {
   return (
-    <Validation className="control-validation">
+    <Validation className="control-validation" style={{ color: textColor }}>
       {children}
-      <p>{msg}</p>
+      <p style={{ color: textColor }}>{msg}</p>
     </Validation>
   );
 };
-Form.Control = ({ as, value, handleChange ,placeholder}) => {
-  return <Control type={as} value={value} onChange={handleChange} placeholder={placeholder} />;
-};
-Form.Label = ({ children }) => {
+Form.Control = ({ as, value, handleChange, placeholder, variant }) => {
   return (
-    <Typography as="label">
-      {children}
-    </Typography>
+    <Control
+      type={as}
+      value={value}
+      onChange={handleChange}
+      placeholder={placeholder}
+      variant={variant}
+    />
   );
 };
-Form.Group = ({ children, icon }) => {
+Form.Label = ({ children }) => {
+  return <Typography as="label">{children}</Typography>;
+};
+Form.Group = ({ children, icon, style }) => {
   return (
-    <Group className="from-group">
+    <Group className="from-group" style={style}>
       {children}
       {icon}
     </Group>
   );
 };
-Form.ControlIcon = ({ svg }) => {
-  return <ControlIcon className="control-icon">{svg}</ControlIcon>;
+Form.ControlIcon = ({ children }) => {
+  return (
+    <StyledControlIcon className="control-icon">{children}</StyledControlIcon>
+  );
 };
 Form.Submit = ({ children, handleSubmit }) => {
   return (
@@ -47,5 +55,19 @@ Form.Submit = ({ children, handleSubmit }) => {
     </Button>
   );
 };
-
+Form.Checkbox = ({ children, handleChange, value, variant }) => {
+  return (
+    <StyledCheckbox variant={variant}>
+      <input
+        type="checkbox"
+        name="conditions"
+        checked={value}
+        onChange={handleChange}
+        id="conditions"
+      />
+      <span class="mark"></span>
+      <label htmlFor="conditions">{children}</label>
+    </StyledCheckbox>
+  );
+};
 export default Form;
