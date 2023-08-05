@@ -142,7 +142,7 @@ const FromContainer = () => {
                 };
               })
             }
-            variant={checkValidations && !controls["email"].isValid ? "error" :''}
+            variant={checkValidations && !controls["email"].isValid && "error"}
           ></Form.Control>
           {checkValidations && (
             <Form.Validation msg={checkEmail()}></Form.Validation>
@@ -197,7 +197,7 @@ const FromContainer = () => {
               })
             }
             variant={
-              checkValidations && !controls["repassword"].isValid ? "error" : ''
+              checkValidations && !controls["repassword"].isValid && "error"
             }
           ></Form.Control>
           {checkValidations && (
